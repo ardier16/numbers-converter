@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="520dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:ignore="UselessParent"
+        android:background="#e0e0e0">
+
+        <TextView
+            android:id="@+id/tvOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Input your number"
+            android:textStyle="normal|bold"
+            android:layout_marginTop="30dp"
+            tools:fontFamily="sans-serif"
+            android:textSize="24sp"
+            android:layout_marginBottom="10dp"
+            tools:ignore="HardcodedText">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_weight="0.06">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:id="@+id/edit1"
+                android:layout_margin="10dp"
+                android:hint="Number"
+                android:textAlignment="center"
+                android:background="?attr/colorBackgroundFloating"
+                tools:ignore="Deprecated,HardcodedText"
+                android:autoText="false"
+                android:inputType="textCapCharacters"
+                android:maxLength="16"
+                android:phoneNumber="false"
+                android:singleLine="false"
+                android:saveEnabled="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:layout_weight="0.15">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:checkedButton="@+id/rb1"
+                android:orientation="horizontal"
+                tools:ignore="InefficientWeight,NestedWeights,UselessParent">
+
+                <RadioButton
+                    android:text="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb2"
+                    android:layout_weight="0.25"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="18sp"
+                    android:checked="true"
+                    tools:ignore="HardcodedText,RtlHardcoded" />
+
+                <RadioButton
+                    android:text="8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb8"
+                    android:layout_weight="0.13"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText,RtlHardcoded"
+                    android:layout_marginLeft="-15dp" />
+
+                <RadioButton
+                    android:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb10"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText,RtlHardcoded"
+                    android:layout_weight="0.13"
+                    android:layout_marginLeft="5dp"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:text="16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb16"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText,RtlHardcoded"
+                    android:layout_weight="0.12"
+                    android:layout_marginLeft="0dp" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_height="71dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_height="59dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Calculate"
+                android:width="150dp"
+                android:elevation="9dp"
+                android:orientation="horizontal"
+                android:background="?attr/colorControlActivated"
+                tools:ignore="HardcodedText,InefficientWeight,NestedWeights,RtlHardcoded"
+                tools:targetApi="lollipop"
+                android:textColor="?attr/colorButtonNormal"
+                android:layout_marginLeft="12dp"
+                android:layout_width="295dp"
+                android:soundEffectsEnabled="false"
+                android:onClick="ConvertNumbers">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:text="2: "
+                android:layout_width="290dp"
+                android:layout_height="match_parent"
+                android:id="@+id/text2"
+                android:textAllCaps="false"
+                android:textSize="30sp"
+                android:textAlignment="textStart"
+                android:textStyle="normal|bold"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout10"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:text="8: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text8"
+                android:textAllCaps="false"
+                android:textSize="30sp"
+                android:textAlignment="textStart"
+                android:textStyle="normal|bold"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:text="10:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text10"
+                android:textAllCaps="false"
+                android:textSize="30sp"
+                android:textAlignment="textStart"
+                android:textStyle="normal|bold"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:text="16:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text16"
+                android:textAllCaps="false"
+                android:textSize="30sp"
+                android:textAlignment="textStart"
+                android:textStyle="normal|bold"
+                tools:ignore="HardcodedText,RtlHardcoded"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:text="Maxim Shopinsky © 2016"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText"
+                android:fontFamily="monospace"
+                tools:fontFamily="casual"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="true"
+                android:textStyle="normal|bold|italic" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
